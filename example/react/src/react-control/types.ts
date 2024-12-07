@@ -1,4 +1,4 @@
-import { FC, FunctionComponent, PropsWithChildren, ReactNode } from "react";
+import { FunctionComponent, ReactNode } from "react";
 
 /**
  *
@@ -16,7 +16,7 @@ export interface ExtendablePromise<T> extends Promise<T> {
   [index: string]: any;
 }
 
-export type When = boolean;
+export type When = (() => BooleanLike) | BooleanLike;
 
 /**
  * Utility type for a React component

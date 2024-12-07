@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { ForExample } from "./ForExample.tsx";
+import { TernaryExample } from "./TernaryExample";
 
-createRoot(document.getElementById("root")!).render(<ForExample />);
+createRoot(document.getElementById("root")!).render(<TernaryExample />);
