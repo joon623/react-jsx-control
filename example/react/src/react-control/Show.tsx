@@ -3,14 +3,14 @@ import { ConditionalComponentProps } from "./types.ts";
 
 export const Show: FC<ConditionalComponentProps> = ({
   children,
-  condition,
+  when,
   fallback,
 }) => {
   if (!children) {
     return null;
   }
 
-  if (condition) {
+  if (when) {
     return <Fragment>{children}</Fragment>;
   } else {
     return <Fragment>{fallback}</Fragment>;
