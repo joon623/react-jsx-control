@@ -1,13 +1,14 @@
 import { FC, Fragment } from "react";
+import { FCWithImplicitChildren } from "./types.ts";
 
 /**
- *
+ * Render a React Component
  *
  * */
-export const Render: FC = ({ children }) => {
-  if (typeof children === "function") {
-    return <Fragment>{children()}</Fragment>;
+export const render: FCWithImplicitChildren = (props) => {
+  if (typeof props.children === "function") {
+    return <Fragment>{props.children()}</Fragment>;
   }
 
-  return <Fragment>{children}</Fragment>;
+  return <Fragment>{props.children || null}</Fragment>;
 };
