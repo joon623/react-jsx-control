@@ -1,4 +1,4 @@
-import { FC, Fragment, ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import { When } from "./types.ts";
 
 /**
@@ -16,7 +16,7 @@ export const Ternary: FC<{
   fallback?: ReactNode;
 }> = ({ when, truthy, falsy, fallback = null }) => {
   if (when === undefined || when === null) {
-    return <Fragment>{fallback ?? null}</Fragment>;
+    return fallback;
   }
 
   return when ? truthy : falsy;
