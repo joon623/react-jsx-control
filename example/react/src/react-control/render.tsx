@@ -8,7 +8,6 @@ export const render: FCWithImplicitChildren = (props) => {
   if (typeof props.children === "function") {
     return <Fragment>{props.children()}</Fragment>;
   }
-  console.log(props.children);
 
   return <Fragment>{props.children || null}</Fragment>;
 };
