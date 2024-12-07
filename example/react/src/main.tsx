@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
+import { SwitchCaseExample } from "./SwitchCaseExample.tsx";
 import "./index.css";
-import { SwitchExample } from "./SwitchExample.tsx";
 
-createRoot(document.getElementById("root")!).render(<SwitchExample />);
+createRoot(document.getElementById("root")!).render(<SwitchCaseExample />);
