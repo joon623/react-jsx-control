@@ -14,7 +14,7 @@ export const Show: FCWithImplicitChildren<{
   }
 
   if (when) {
-    return <Fragment>{render(children)}</Fragment>;
+    return <Fragment>{render({ children })}</Fragment>;
   } else {
     return <Fragment>{fallback || null}</Fragment>;
   }

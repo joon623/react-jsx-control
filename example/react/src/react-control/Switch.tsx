@@ -1,4 +1,4 @@
-import { Children, FC } from "react";
+import { Children, FC, isValidElement } from "react";
 
 export const Switch: FC = ({ children }) => {
   if (!children) {
@@ -7,7 +7,11 @@ export const Switch: FC = ({ children }) => {
 
   const childArray = Children.toArray(children);
   const correct = childArray.find((child) => {
-    return child.props.when;
+    if (isValidElement(child)) {
+      return child.props.when;
+    }
+
+    return null;
   });
 
   return <>{correct}</>;

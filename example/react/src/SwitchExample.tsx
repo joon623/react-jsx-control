@@ -1,7 +1,7 @@
 import "./App.css";
-import { Match, Show, Switch } from "./react-control";
+import { Match, Switch } from "./react-control";
 
-function SwitchPage() {
+export function SwitchExample() {
   return (
     <>
       <h1>Switch</h1>
@@ -16,5 +16,3 @@ function SwitchPage() {
     </>
   );
 }
-
-export default SwitchPage;

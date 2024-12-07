@@ -1,12 +1,10 @@
-import { FC } from "react";
-import { ConditionalComponentPropsWithOutFallback } from "./types.ts";
+import { FCWithImplicitChildren } from "./types.ts";
+import { render } from "./render.tsx";
 
-export const Match: FC<ConditionalComponentPropsWithOutFallback> = ({
-  children,
-}) => {
+export const Match: FCWithImplicitChildren = ({ children }) => {
   if (!children) {
     return null;
   }
 
-  return <>{children}</>;
+  return <>{render({ children })}</>;
 };

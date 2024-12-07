@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { TernaryExample } from "./TernaryExample";
+import { SwitchExample } from "./SwitchExample.tsx";
 
-createRoot(document.getElementById("root")!).render(<TernaryExample />);
+createRoot(document.getElementById("root")!).render(<SwitchExample />);
