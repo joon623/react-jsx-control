@@ -1,6 +1,5 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.tsx";
-import SwitchPage from "./Switch.tsx";
+import { ForExample } from "./ForExample.tsx";
 
-createRoot(document.getElementById("root")!).render(<SwitchPage />);
+createRoot(document.getElementById("root")!).render(<ForExample />);
