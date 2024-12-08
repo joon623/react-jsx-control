@@ -9,5 +9,5 @@ export const Show: FCWithImplicitChildren<{
   when: BooleanLike;
   fallback: ReactNode;
 }> = ({ children, when, fallback = null }) => {
-  return <>{when ? render({ children }) : fallback}</>;
+  return <Fragment>{when ? render({ children }) : fallback}</Fragment>;
 };

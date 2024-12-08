@@ -36,7 +36,7 @@ import { mapToArray } from "./util/mapToArray.ts";
  * */
 export const For: FC = <T,>({
   each,
-  fallback,
+  fallback = null,
   children,
 }: {
   each: T[];
