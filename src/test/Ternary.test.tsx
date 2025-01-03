@@ -48,11 +48,7 @@ describe("<Ternary /> Component test", () => {
 
   it("renders truthy when 'when' is a BooleanLike value", () => {
     render(
-      <Ternary
-        when={1} // Boolean-like truthy value
-        truthy={<div>Truthy</div>}
-        falsy={<div>Falsy</div>}
-      />,
+      <Ternary when={1} truthy={<div>Truthy</div>} falsy={<div>Falsy</div>} />,
     );
 
     expect(screen.getByText("Truthy")).toBeInTheDocument();
@@ -61,11 +57,7 @@ describe("<Ternary /> Component test", () => {
 
   it("renders falsy when 'when' is a falsy BooleanLike value", () => {
     render(
-      <Ternary
-        when={0} // Boolean-like falsy value
-        truthy={<div>Truthy</div>}
-        falsy={<div>Falsy</div>}
-      />,
+      <Ternary when={0} truthy={<div>Truthy</div>} falsy={<div>Falsy</div>} />,
     );
 
     expect(screen.getByText("Falsy")).toBeInTheDocument();
@@ -73,7 +65,7 @@ describe("<Ternary /> Component test", () => {
   });
 
   it("renders falsy when 'when' is undefined", () => {
-    render(
+    const { container } = render(
       <Ternary
         when={undefined}
         truthy={<div>Truthy</div>}
@@ -85,7 +77,7 @@ describe("<Ternary /> Component test", () => {
   });
 
   it("renders falsy when 'when' is null", () => {
-    render(
+    const { container } = render(
       <Ternary
         when={null}
         truthy={<div>Truthy</div>}
