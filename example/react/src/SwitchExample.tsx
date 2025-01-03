@@ -1,5 +1,5 @@
 import "./App.css";
-import { Match, Switch } from "./react-control";
+import { Match, Switch } from "../../../src";
 
 export function SwitchExample() {
   return (

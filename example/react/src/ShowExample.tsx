@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Show } from "./react-control";
+import { Show } from "../../../src";
 
 export const ShowExample: FC = () => {
   return (

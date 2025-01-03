@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactNode } from "react";
+import { FunctionComponent, ReactNode } from "react";
 
 export type BooleanLike =
   | boolean
@@ -12,9 +12,17 @@ export interface ExtendablePromise<T> extends Promise<T> {
   [index: string]: any;
 }
 
-export type NonNullObject = {} & object;
-
 export type When = (() => BooleanLike) | BooleanLike;
 
-export type ConditionalComponentProps<P = NonNullObject> = P &
-  PropsWithChildren<{ when: When; fallback: ReactNode }>;
+/**
+ * Utility type for a React component
+ * */
+export type NonNullObject = object;
+
+export type CustomPropsWithChildren<P> = P & {
+  children?: ReactNode | undefined | ((...args: unknown[]) => ReactNode);
+};
+
+export type FCWithImplicitChildren<P = NonNullObject> = FunctionComponent<
+  CustomPropsWithChildren<P>
+>;

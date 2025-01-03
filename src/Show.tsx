@@ -1,15 +1,13 @@
-import { FC, Fragment } from "react";
-import { ConditionalComponentProps } from "./types";
+import { Fragment, ReactNode } from "react";
+import { BooleanLike, FCWithImplicitChildren } from "./types.ts";
+import { render } from "./render.tsx";
 
-export const Show: FC<ConditionalComponentProps> = ({
-  children,
-  condition,
-}) => {
-  if (!children) {
-    return null;
-  }
-
-  if (condition) {
-    return <Fragment>{children}</Fragment>;
-  }
+/**
+ * If Show is true, render the children, otherwise render the fallback
+ * */
+export const Show: FCWithImplicitChildren<{
+  when: BooleanLike;
+  fallback: ReactNode;
+}> = ({ children, when, fallback = null }) => {
+  return <Fragment>{when ? render({ children }) : fallback}</Fragment>;
 };

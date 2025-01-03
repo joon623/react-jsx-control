@@ -1,4 +1,4 @@
-import { Ternary } from "./react-control/Ternary.tsx";
+import { Ternary } from "../../../src/Ternary.tsx";
 
 export const TernaryExample = () => {
   return (

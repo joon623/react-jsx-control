@@ -1,5 +1,5 @@
 import "./App.css";
-import { Show } from "./react-control";
+import { Show } from "../../../src";
 
 function App() {
   return (
