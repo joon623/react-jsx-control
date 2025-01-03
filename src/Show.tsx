@@ -7,7 +7,7 @@ import { render } from "./render.tsx";
  * */
 export const Show: FCWithImplicitChildren<{
   when: BooleanLike;
-  fallback: ReactNode;
-}> = ({ children, when, fallback = null }) => {
+  fallback?: ReactNode;
+}> = ({ children, when, fallback }) => {
   return <Fragment>{when ? render({ children }) : fallback}</Fragment>;
 };
