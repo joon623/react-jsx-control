@@ -9,10 +9,14 @@ const AsyncComponent = () => {
   useEffect(() => {
     setTimeout(() => {
       setData("Loaded");
-    }, 500);
+    }, 100);
   }, []);
 
-  return <div>{data || "loading.."}</div>;
+  return (
+    <Show when={data} fallback={<div>loading..</div>}>
+      <div>{data}</div>
+    </Show>
+  );
 };
 
 describe("test <Show /> component", () => {
