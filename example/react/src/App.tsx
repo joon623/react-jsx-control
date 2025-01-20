@@ -1,5 +1,5 @@
-import "./App.css";
 import { Show } from "../../../src";
+import "./App.css";
 
 function App() {
   return (

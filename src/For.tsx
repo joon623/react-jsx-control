@@ -1,4 +1,4 @@
-import { FC, Fragment, ReactNode } from "react";
+import { Fragment, ReactNode } from "react";
 import { generateRandomKey } from "./util/generateRandomKey.ts";
 import { mapToArray } from "./util/mapToArray.ts";
 
@@ -34,7 +34,7 @@ import { mapToArray } from "./util/mapToArray.ts";
  * };
  * ```
  * */
-export const For: FC = <T,>({
+export const For = <T,>({
   each,
   fallback = null,
   children,

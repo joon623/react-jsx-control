@@ -1,4 +1,4 @@
-import { For } from "../../../src/For.tsx";
+import { For } from "../../../src";
 
 export const ForExample = () => {
   const hamburgers = [

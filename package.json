@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest run",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "build:dist": "tsup"
   },
   "keywords": [],
   "author": "",

@@ -1,6 +1,6 @@
-import { Children, FC, isValidElement } from "react";
+import { Children, isValidElement, PropsWithChildren } from "react";
 
-export const Switch: FC = ({ children }) => {
+export const Switch = ({ children }: PropsWithChildren) => {
   if (!children) {
     return null;
   }

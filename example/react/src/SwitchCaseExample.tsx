@@ -1,4 +1,4 @@
-import { SwitchCase } from "../../../src/SwitchCase.tsx";
+import { SwitchCase } from "../../../src";
 
 export const SwitchCaseExample = () => {
   return (
