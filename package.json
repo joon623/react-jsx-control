@@ -1,16 +1,17 @@
 {
-  "name": "react-flow-manager",
-  "version": "1.0.0",
+  "name": "react-jsx-control",
+  "description": "",
+  "version": "1.0.2",
   "main": "index.js",
+  "keyword": ["react", "jsx", "control"],
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest watch",
     "build:dist": "tsup"
   },
-  "keywords": [],
-  "author": "",
+  "file": ["dist/"],
+  "author": "jun park",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",

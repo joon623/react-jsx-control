@@ -1,0 +1,18 @@
+# 제외할 폴더
+src/
+example/
+node_modules/
+.idea
+
+# 제외할 설정 파일
+.gitignore
+package.json
+tsconfig.json
+tsup.config.js
+vite.config.js
+vitestSetup.ts
+yarn.lock
+
+# 기타 파일
+*.log
+*.test.*
