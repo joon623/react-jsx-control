@@ -3,30 +3,41 @@ import { ReactNode } from "react";
 /**
  * SwitchCase Component
  *
- * A component that conditionally renders a child component based on a `match` value.
- * This is a utility component for cleaner and more readable conditional rendering in React.
+ * A utility component for conditional rendering in React. It renders a specific ReactNode
+ * based on the `match` value. If no match is found in the `caseBy` object, it renders the
+ * `fallback` component (default is `null`).
  *
- * @template T - The type of the `match` value, which can be a string or number.
+ * @template T - The type of the `match` value (must be either `string` or `number`).
  *
  * @param {T} match - The value used to determine which child component to render.
- * @param {Record<T, ReactNode>} caseBy - An object mapping possible `match` values to React nodes.
- *                                         The keys should correspond to possible `match` values,
- *                                         and the values are the components or elements to render.
- * @param {ReactNode} [fallback=null] - A fallback component or element to render if the `match`
- *                                      value does not exist in the `caseBy` object. Defaults to `null`.
+ * @param {Partial<Record<T, ReactNode>>} caseBy - An object where keys are possible `match` values
+ *                                                 and values are the ReactNodes to render.
+ *                                                 The keys are optional (`Partial`) to allow for flexibility.
+ * @param {ReactNode} [fallback=null] - A fallback ReactNode to render if the `match` value
+ *                                      does not exist in `caseBy`. Defaults to `null`.
  *
- * @returns {ReactNode} - The child component corresponding to the `match` value from `caseBy`,
- *                        or the fallback component if no match is found.
+ * @returns {ReactNode} - The ReactNode corresponding to the `match` value from `caseBy`,
+ *                        or the `fallback` if no match is found.
  *
  * @example
- * // Example usage:
+ * // Example usage with string keys:
  * <SwitchCase
- *   match={"a"}
+ *   match="a"
  *   caseBy={{
  *     a: <div>Case A</div>,
  *     b: <div>Case B</div>,
  *   }}
  *   fallback={<div>Default case</div>}
+ * />
+ *
+ * // Example usage with number keys:
+ * <SwitchCase
+ *   match={1}
+ *   caseBy={{
+ *     1: <div>Case 1</div>,
+ *     2: <div>Case 2</div>,
+ *   }}
+ *   fallback={<div>No match</div>}
  * />
  */
 export const SwitchCase = <T extends string | number>({
@@ -35,7 +46,7 @@ export const SwitchCase = <T extends string | number>({
   fallback = null,
 }: {
   match: T;
-  caseBy: Record<T, ReactNode>;
+  caseBy: Partial<Record<T, ReactNode>>;
   fallback?: ReactNode;
 }) => {
   return caseBy[match] || fallback;
