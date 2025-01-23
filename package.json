@@ -1,17 +1,29 @@
 {
   "name": "react-jsx-control",
-  "description": "",
-  "version": "1.0.2",
-  "main": "index.js",
-  "keyword": ["react", "jsx", "control"],
+  "description": "React JSX utility components for clean and efficient conditional and iterative rendering. Simplifies rendering logic with components like Ternary, Show, and SwitchCase.",
+  "version": "1.0.4",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keyword": [
+    "react",
+    "jsx",
+    "control",
+    "react-utilities",
+    "react-conditional-rendering"
+  ],
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest watch",
     "build:dist": "tsup"
   },
-  "file": ["dist/"],
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
   "author": "jun park",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
