@@ -1,7 +1,7 @@
 {
   "name": "react-jsx-control",
   "description": "React JSX utility components for clean and efficient conditional and iterative rendering. Simplifies rendering logic with components like Ternary, Show, and SwitchCase.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -22,6 +22,10 @@
     "dist",
     "LICENSE"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joon623/react-jsx-control"
+  },
   "author": "jun park",
   "license": "MIT",
   "devDependencies": {
